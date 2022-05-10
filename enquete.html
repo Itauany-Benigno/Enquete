@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title> Enquete </title>
+ <style type="text/css">
+#circle{
+width: 380px;
+height: 380px;
+background-color:royalblue;
+margin: 70px;
+border-radius: 200px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+color: white;
+font-family: Brush Script MT;
+font-size: 30px;
+  }
+body{
+ background-color: #210929;
+}
+#text{
+ 
+ 
+}
+.botao{
+    
+}
+.result{
+    color: white;
+}
+#Sim{
+background-color:lightblue;      
+border: 3px solid white;
+border-radius: 4px;
+color:white;
+height: 30px;
+width: 60px;
+}
+
+ #Nao{
+background-color: royalblue;
+border: 3px solid white;
+border-radius: 4px;
+color:white;
+height: 30px;
+width: 60px;
+}
+
+.p1{
+margin-top: 10px;
+text-align: center;
+}
+
+
+#d{
+background-color: darkgreen;
+height: 20px;
+width: 10px;
+}
+
+#n{
+background-color: darkred;
+height: 20px;
+width: 10px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resusu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+fieldset{
+width: 100px;
+color: white;
+        }
+</style>
+</head>
+
+
+<body>
+ <div class="p">
+
+<center><div id="circle">Você acredita em Sereias?</div></center>
+
+<div class="botoes">
+    <button class="botao" type="button" id="Sim" onclick="Sim()"> Sim </button>
+    <button class="botao" type="button" id="Nao" onclick="Nao()"> Não </button>
+</div>
+<div class="resusu">
+<h2 class="result"> Resultado: </h2>
+<fieldset><div class="p1" id="d">0</div></fieldset>
+<fieldset><div class="p1" id="n">0</div></fieldset>
+</div>
+
+</div>
+</center>
+
+<script type="text/javascript">
+	var largura = 10;
+    var votos = 0;
+
+    function Sim(){
+    largura+= 10;
+    votos+=1;
+
+    document.querySelector("#d").style.width = largura + "px";
+    document.querySelector("#d").innerHTML = votos;
+    }
+
+    var largura2 = 10;
+    var votos2 = 0;
+
+    function Nao(){
+    largura2 += 10;
+    votos2 += 1;
+
+    document.querySelector("#n").style.width = largura2 + "px";
+    document.querySelector("#n").innerHTML = votos2;
+
+    }
+</script>
+</body>
+</html>
